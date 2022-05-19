@@ -1,0 +1,88 @@
+.header {
+  width: 100%; }
+  .header__container {
+    display: flex;
+    background-color: #027bfe;
+    justify-content: space-between; }
+    .header__container__logo {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px; }
+      .header__container__logo img {
+        max-width: 105px;
+        margin-right: 15px; }
+      .header__container__logo a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px; }
+    .header__container__list {
+      display: inline-flex;
+      list-style: none;
+      align-items: center;
+      margin-right: 30px; }
+      .header__container__list li {
+        padding: 0 15px; }
+        .header__container__list li a {
+          color: #e9e9e9;
+          text-decoration: none; }
+
+.carousel .bx-wrapper {
+  border: none; }
+  .carousel .bx-wrapper .bx-pager {
+    margin-top: -60px;
+    color: #fff;
+    bottom: 10px; }
+    .carousel .bx-wrapper .bx-pager a.active {
+      background-color: #ffffff !important; }
+
+.carousel__slider__item {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .carousel__slider__item h1 {
+    font-size: 32px;
+    position: absolute;
+    color: #ffffff; }
+    .carousel__slider__item h1 span {
+      font-size: 24px; }
+  .carousel__slider__item img {
+    max-height: 800px;
+    width: inherit; }
+
+.first-content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0 16px; }
+  .first-content__title {
+    font-size: 24px;
+    margin-bottom: 16px; }
+  .first-content__subtitle {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 16px; }
+
+.footer {
+  background-color: #0f0f35;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px; }
+  .footer__box-item {
+    color: #ffffff;
+    text-align: center;
+    padding: 35px; }
+    .footer__box-item i {
+      font-size: 24px;
+      margin-bottom: 16px; }
+    .footer__box-item__title {
+      font-size: 18px;
+      margin-bottom: 8px;
+      font-weight: normal;
+      text-transform: uppercase; }
+    .footer__box-item__description {
+      font-size: 14px;
+      margin-bottom: 8px;
+      font-weight: normal; }
+
+.bordered {
+  border-right: 1px solid #e7e7e7; }

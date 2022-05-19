@@ -1,0 +1,23 @@
+{
+  "name": "curso-front-usach",
+  "version": "1.0.0",
+  "description": "Learn frontend again!",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jargskin/curso-front-usach.git"
+  },
+  "author": "JarG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jargskin/curso-front-usach/issues"
+  },
+  "homepage": "https://github.com/jargskin/curso-front-usach#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1",
+    "normalize.css": "^8.0.1"
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <title>Tarea 2 - Flexbox</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="header__container">
+      <div class="header__container__logo">
+        <img src="./images/frontend-logo.png" alt="">
+        <a href="">FrontEnd Developers</a>
+      </div>
+      <ul class="header__container__list">
+        <li><a href="#">Home</a> </li>
+        <li><a href="#">About</a> </li>
+        <li><a href="#">Services</a> </li>
+        <li><a href="#">Portfolio</a> </li>
+        <li><a href="#">Pages</a> </li>
+        <li><a href="#">Contact</a> </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="carousel">
+    <div class="carousel__slider" id="slider">
+      <div class="carousel__slider__item">
+        <h1>FrontEnd <br> <span>Flexbox task</span></h1>
+        <img src="./images/banner_1.png" alt="">
+      </div>
+      <div class="carousel__slider__item">
+        <h1>FrontEnd <br> <span>Flexbox task</span></h1>
+        <img src="./images/banner_2.png" alt="">
+      </div>
+      <div class="carousel__slider__item">
+        <h1>FrontEnd <br> <span>Flexbox task</span></h1>
+        <img src="./images/banner_1.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section class="first-content">
+    <div>
+      <h2 class="first-content__title">
+        Welcome
+      </h2>
+      <h3 class="first-content__subtitle">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus illum provident iste eveniet ex ipsam quaerat dolorem, ipsa debitis qui fugiat, quas praesentium iusto veritatis tempore voluptas saepe quo nesciunt.
+        Et quaerat voluptas architecto inventore similique impedit repudiandae magni facilis numquam aliquam at maxime dicta ipsa doloremque, repellendus quasi eaque neque quo tenetur expedita. Eveniet amet tempore officiis tempora corrupti!
+        Non nulla aliquid optio error beatae qui, perferendis tempora accusamus aut facilis nam quo illum eius, minima id, labore ipsum? Necessitatibus doloribus iusto iure beatae aperiam illum error tempore explicabo!
+      </h3>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__box-item bordered">
+      <i class="fa fa-users" aria-hidden="true"></i>
+      <p class="footer__box-item__title">Managment</p>
+      <span class="footer__box-item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+    </div>
+    <div class="footer__box-item bordered">
+      <i class="fa-solid fa-globe"></i>
+      <p class="footer__box-item__title">planning</p>
+      <span class="footer__box-item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+    </div>
+    <div class="footer__box-item bordered">
+      <i class="fa-solid fa-store"></i>
+      <p class="footer__box-item__title">Marketing</p>
+      <span class="footer__box-item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+    </div>
+    <div class="footer__box-item">
+      <i class="fa-solid fa-file-pen"></i>
+      <p class="footer__box-item__title">Report</p>
+      <span class="footer__box-item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+    </div>
+  </footer>
+  <script>
+    $(document).ready(function () {
+      $('#slider').bxSlider();
+    });
+  </script>
+</body>
+</html>
