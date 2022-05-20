@@ -25,7 +25,8 @@
         <img src="./images/frontend-logo.png" alt="">
         <a href="">FrontEnd Developers</a>
       </div>
-      <ul class="header__container__list">
+      <button id="btn-menu"><i class="fa-solid fa-bars"></i></button>
+      <ul class="header__container__list" id="menu">
         <li><a href="#">Home</a> </li>
         <li><a href="#">About</a> </li>
         <li><a href="#">Services</a> </li>
@@ -64,17 +65,17 @@
     </div>
   </section>
   <footer class="footer">
-    <div class="footer__box-item bordered">
+    <div class="footer__box-item">
       <i class="fa fa-users" aria-hidden="true"></i>
       <p class="footer__box-item__title">Managment</p>
       <span class="footer__box-item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
     </div>
-    <div class="footer__box-item bordered">
+    <div class="footer__box-item">
       <i class="fa-solid fa-globe"></i>
       <p class="footer__box-item__title">planning</p>
       <span class="footer__box-item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
     </div>
-    <div class="footer__box-item bordered">
+    <div class="footer__box-item">
       <i class="fa-solid fa-store"></i>
       <p class="footer__box-item__title">Marketing</p>
       <span class="footer__box-item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
@@ -88,6 +89,21 @@
   <script>
     $(document).ready(function () {
       $('#slider').bxSlider();
+      $('#btn-menu').click(function () {
+        if (!$('#menu').is(":visible")){
+          $('#menu').show()
+        } else {
+          $('#menu').hide()
+        }
+      })
+      $(window).resize(function () {
+        if ($(document).width() > 768) {
+          $('#menu').css('display', 'inline-flex')
+        } else if($('#menu').is(':visible')) {
+          $('#menu').css('display', 'none')
+        }
+      }).resize()
+      
     });
   </script>
 </body>
