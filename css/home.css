@@ -124,3 +124,21 @@
       border: none; }
       .footer__box-item {
         border: none; } }
+
+#pokemonList {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fafafa;
+  padding: 60px 20px;
+  justify-content: center; }
+  #pokemonList .pokemon {
+    background-color: #fff;
+    max-width: 200px;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 20px; }
+    #pokemonList .pokemon img {
+      max-width: 100%; }

@@ -36,7 +36,7 @@
       </ul>
     </nav>
   </header>
-  <section class="carousel">
+  <!-- <section class="carousel">
     <div class="carousel__slider" id="slider">
       <div class="carousel__slider__item">
         <h1>FrontEnd <br> <span>Flexbox task</span></h1>
@@ -51,7 +51,7 @@
         <img src="./images/banner_1.png" alt="">
       </div>
     </div>
-  </section>
+  </section> -->
   <section class="first-content">
     <div>
       <h2 class="first-content__title">
@@ -63,6 +63,8 @@
         Non nulla aliquid optio error beatae qui, perferendis tempora accusamus aut facilis nam quo illum eius, minima id, labore ipsum? Necessitatibus doloribus iusto iure beatae aperiam illum error tempore explicabo!
       </h3>
     </div>
+  </section>
+  <section id="pokemonList">
   </section>
   <footer class="footer">
     <div class="footer__box-item">
@@ -86,6 +88,7 @@
       <span class="footer__box-item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
     </div>
   </footer>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
     $(document).ready(function () {
       $('#slider').bxSlider();
@@ -104,6 +107,36 @@
         }
       }).resize()
       
+      const getPokemon = async (count) => {
+        const pokemonArray = [];
+        for (let index = 1; index <= count; index++) {
+          try {
+            await axios.get(`https://pokeapi.co/api/v2/pokemon/${index}/`)
+              .then(response => {
+                const pokemon = response.data;
+                pokemonArray.push(pokemon)
+              })
+              .catch(error => console.error(error));
+          } catch (error) {
+              console.log(error)            
+          }
+        }
+        return pokemonArray;
+      };
+  
+      const createDivWithPokemon = async (count) => {
+        const pokemon = await getPokemon(count);
+        pokemon.map((item) => {
+          const div = document.createElement('div');
+          div.classList.add('pokemon');
+          div.innerHTML = `
+            <h3 class="card-title">${item.species.name}</h3>
+            <img src="${item.sprites.other.home.front_default}" alt="">
+          `;
+          document.getElementById('pokemonList').appendChild(div);
+        })
+      };
+      createDivWithPokemon(20)
     });
   </script>
 </body>
